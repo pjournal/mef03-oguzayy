@@ -448,9 +448,9 @@ names(table) &lt;- c(&quot;Sector&quot;, &quot;TransactionCount_CC&quot;, &quot;
 </ul>
 <pre class="r"><code>table %&gt;%
   filter (Month == 6) %&gt;%
-  transmute(Sector, Tot_Tran_Amount = (TransactionAmount_CC + TransactionAmount_DC)) %&gt;%
+  transmute(Sector_ID, Tot_Tran_Amount = (TransactionAmount_CC + TransactionAmount_DC)) %&gt;%
   arrange(desc(Tot_Tran_Amount)) %&gt;%
-  mutate(Sector = case_when(Sector_ID %in% c(&quot;17&quot;, &quot;9&quot;,
+  mutate(Sector_ID = case_when(Sector_ID %in% c(&quot;17&quot;, &quot;9&quot;,
                                           &quot;3&quot;,&quot;5&quot;, &quot;11&quot;,
                                           &quot;25&quot;, &quot;8&quot;) ~ Sector, TRUE ~ &quot;99&quot;)) %&gt;%
   group_by(Sector_ID) %&gt;%
