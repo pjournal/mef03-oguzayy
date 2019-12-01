@@ -9,3 +9,7 @@ My personal journal.
 ### Week 4 - BKM Assignment
 
 - For the BKM assignment see [BKM Assignment](BKM_Assignment.html)
+
+### Data joins with dplyr
+
+- For the data joins with dplyr see [dplyr](tennis_data.html)
